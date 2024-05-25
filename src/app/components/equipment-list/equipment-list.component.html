@@ -1,0 +1,13 @@
+<div class="EquipmentList">
+  <app-equipment
+    *ngFor="let equip of equipamentosPaginados"
+    [equipamento]="equip"
+    (verDetalhes)="verDetalhes($event)"
+  ></app-equipment>
+</div>
+
+<div class="pagination-controls">
+  <button (click)="paginaAnterior()" [disabled]="paginaAtual === 1">Anterior</button>
+  <span>Página {{ paginaAtual }} de {{ totalPaginas }}</span>
+  <button (click)="proximaPagina()" [disabled]="paginaAtual === totalPaginas">Próxima</button>
+</div>

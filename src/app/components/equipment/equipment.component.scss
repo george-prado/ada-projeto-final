@@ -1,0 +1,35 @@
+$available: #39ff14;
+$unavailable: #ff073a;
+$font-family: 'Star Jedi', sans-serif;
+
+.Equipment {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 150px;
+  align-items: center;
+  background: white;
+  color: black;
+  border-radius: 4px;
+  padding: 2px;
+  &__image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.available {
+  color: $available; 
+  font-family: $font-family;
+  text-shadow: 1px 1px 16px $available;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.unavailable {
+  color: $unavailable; 
+  font-family: $font-family; 
+  text-shadow: 1px 1px 16px $unavailable;
+  font-weight: bold;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,23 @@
+<div class="Filter">
+  <input
+    type="text"
+    [(ngModel)]="filtro"
+    placeholder="Informe o nome do equipamento desejado"
+  />
+
+  <select [(ngModel)]="isAvailable">
+    <option value="">Todos</option>
+    <option value="true">Disponível</option>
+    <option value="false">Indisponível</option>
+  </select>
+
+  <select [(ngModel)]="sortOrder">
+    <option value="ASC">ASC</option>
+    <option value="DESC">DESC</option>
+  </select>
+
+  <div class="Filter__actions">
+    <button type="button" (click)="buscarEquipamentoPorNome()">Buscar</button>
+    <button type="button" (click)="limparFiltro()">Limpar</button>
+  </div>
+</div>
